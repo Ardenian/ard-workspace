@@ -4,9 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "npm run build-lib && npm run build-app",
+    "build-lib": "ng build ard-library",
+    "build-app": "ng build ard-prototype",
+    "test-lib": "ng test ard-library",
+    "test-lib-headless": "ng test ard-library --browsers ChromeHeadless",
+    "test-app": "ng test ard-prototype",
+    "test-app-headless": "ng test ard-prototype --browsers ChromeHeadless"
   },
   "private": true,
   "dependencies": {
