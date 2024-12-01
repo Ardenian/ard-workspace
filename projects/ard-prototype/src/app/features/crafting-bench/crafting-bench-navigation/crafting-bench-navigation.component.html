@@ -1,0 +1,5 @@
+<lib-vertical-layout>
+  @for (page of pages; track $index) {
+  <span (click)="onPageChange(page.type)"> {{ page.displayName }}</span>
+  }
+</lib-vertical-layout>
